@@ -1,7 +1,7 @@
 import sys
 import os
-from PyQt6.QtCore import pyqtSignal
-from PyQt6.QtWidgets import QApplication, QMainWindow, QFileDialog, QMessageBox
+from PySide6.QtCore import Signal
+from PySide6.QtWidgets import QApplication, QMainWindow, QFileDialog, QMessageBox
 from PIL import Image, ImageFont, ImageQt
 from handright import Template, handwrite
 from threading import Thread
@@ -10,7 +10,7 @@ from ui import *
 
 
 class mainwindow(QMainWindow, Ui_Form):
-    sendmsg = pyqtSignal()
+    sendmsg = Signal()
 
     def __init__(self):
         QMainWindow.__init__(self)
